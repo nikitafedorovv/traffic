@@ -10,8 +10,14 @@ class StateThread(threading.Thread):
         self.trafficLight = trafficLight
 
     def run(self):
+        state = self.trafficLight.get_current_state()
+        self.changeState(state)
+
         while True:
             state = self.trafficLight.process_and_get_new_state()
-            self.greenState.config(text=state[0])
-            self.yellowState.config(text=state[1])
-            self.redState.config(text=state[2])
+            self.changeState(state)
+
+    def changeState(self, state):
+        self.greenState.config(text=state[0])
+        self.yellowState.config(text=state[1])
+        self.redState.config(text=state[2])
