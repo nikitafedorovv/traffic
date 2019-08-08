@@ -1,5 +1,8 @@
 import threading
 
+LIGHT_ON_STR = '⚫'
+LIGHT_OFF_STR = '⚪'
+
 
 class StateThread(threading.Thread):
     def __init__(self, greenState, yellowState, redState, trafficLight):
@@ -18,6 +21,6 @@ class StateThread(threading.Thread):
             self.changeState(state)
 
     def changeState(self, state):
-        self.greenState.config(text="◯" if state[0] == 0 else "⬤")
-        self.yellowState.config(text="◯" if state[1] == 0 else "⬤")
-        self.redState.config(text="◯" if state[2] == 0 else "⬤")
+        self.greenState.config(text=LIGHT_ON_STR if state[0] else LIGHT_OFF_STR)
+        self.yellowState.config(text=LIGHT_ON_STR if state[1] else LIGHT_OFF_STR)
+        self.redState.config(text=LIGHT_ON_STR if state[2] else LIGHT_OFF_STR)
