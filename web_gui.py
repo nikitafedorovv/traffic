@@ -7,9 +7,9 @@ class MyGuy:
     def __init__(self):
         self.root = tk.Tk()
 
-        Label(text="RED:").grid(row=0, column=0)
-        Label(text="YELLOW:").grid(row=1, column=0)
-        Label(text="GREEN:").grid(row=2, column=0)
+        Label(text="⬤", fg='red').grid(row=0, column=0)
+        Label(text="⬤", fg='yellow').grid(row=1, column=0)
+        Label(text="⬤", fg='green').grid(row=2, column=0)
 
         self.greenState = Label(self.root, text="0")
         self.greenState.grid(row=2, column=1)
