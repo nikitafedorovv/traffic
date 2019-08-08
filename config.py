@@ -1,5 +1,5 @@
-STATES_CONFIG = {'100': {'next_state': [1, 1, 0], 'delay': 4},
-                 '110': {'next_state': [0, 0, 1], 'delay': 2},
-                 '001': {'next_state': [0, 1, 1], 'delay': 4},
-                 '011': {'next_state': [1, 0, 0], 'delay': 2}
+STATES_CONFIG = {'100': {'sleep_time_seconds': 4, 'next_state': '110'},
+                 '110': {'sleep_time_seconds': 2, 'next_state': '001'},
+                 '001': {'sleep_time_seconds': 4, 'next_state': '011'},
+                 '011': {'sleep_time_seconds': 2, 'next_state': '100'}
                  }
