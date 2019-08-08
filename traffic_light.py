@@ -10,7 +10,7 @@ STATE_MACHINE = {'100': {'sleep_time_seconds': 4, 'next_state': '010'},
 
 
 class TrafficLight:
-    __state = '011'
+    __state = '100'
 
     def __init__(self):
         pass
@@ -22,4 +22,4 @@ class TrafficLight:
         return as_array(self.__state)
 
     def get_current_state(self):
-        return self.__state
+        return as_array(self.__state)
