@@ -18,6 +18,6 @@ class StateThread(threading.Thread):
             self.changeState(state)
 
     def changeState(self, state):
-        self.greenState.config(text=state[0])
-        self.yellowState.config(text=state[1])
-        self.redState.config(text=state[2])
+        self.greenState.config(text="◯" if state[0] == 0 else "⬤")
+        self.yellowState.config(text="◯" if state[1] == 0 else "⬤")
+        self.redState.config(text="◯" if state[2] == 0 else "⬤")
