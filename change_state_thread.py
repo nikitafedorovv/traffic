@@ -1,7 +1,5 @@
 import threading
-
-LIGHT_ON_STR = '⚫'
-LIGHT_OFF_STR = '⚪'
+from web_gui import LIGHT_ON_STR, LIGHT_OFF_STR
 
 
 class StateThread(threading.Thread):
